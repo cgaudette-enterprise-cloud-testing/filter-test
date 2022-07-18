@@ -54,6 +54,6 @@ jobs:
           
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v1
-        if: hashFiles('eslint.sarif') != ''
+        if: hashFiles('eslint-results.sarif') != ''
         with:
-          sarif_file: eslint.sarif
+          sarif_file: eslint-results.sarif
